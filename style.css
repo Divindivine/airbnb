@@ -4,18 +4,22 @@
     box-sizing: border-box;
     font-family: family;
 }
+
 body,html{
     margin: 0;
     padding: 0;
     width: 100%;
 }
+
 @font-face {
     font-family: family;
     src: url(fonts/AirbnbCerealVF_W_Wght.9c00198218646e3b3f345aa4bc3fda51.woff2);
 }
+
 .whole{
     width: 100%;
 }
+
 .fixed-head{
     width: 100%;
     background: white;
@@ -23,9 +27,11 @@ body,html{
     top: 0;
     z-index: 5;
     border-bottom: 3px solid rgb(248, 242, 242);
-}.search-field{
+}
+.search-field{
     width: 100%;
 }
+
 .search-bar{
     display: grid;
     border: 0.5px solid rgba(0 0 0 / 0.08);
@@ -38,6 +44,7 @@ body,html{
     color: #222222;
     min-height: 56px;
 }
+
 .searchbar-button{
     padding-inline-start: 4px;
     padding-inline-end: 4px;
@@ -50,25 +57,30 @@ body,html{
     max-width: 100%;
     display: inline-grid;
 }
+
 .smallsearch{
     display: grid;
     place-items: center;
 }
+
 .smallsearch img{
     width: 20px;
     height: 20px;
 }
+
 .searchbar-def{
     padding-left: 2px;
     overflow: hidden;
     max-width: 100%;
     display: inline-block;
 }
+
 .searchbar-def-part1{
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.25rem;
 }
+
 .searchbar-def-part2{
     padding-inline-end: 24px;
     line-height: 1rem;
@@ -77,6 +89,7 @@ body,html{
     display: flex;
     gap: 5px;
 }
+
 .searchbar-def-part2 span{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -84,20 +97,24 @@ body,html{
     min-width: 50px;
     flex: 0 1 auto;  
 }
+
 .item-field{
     width: 100%;
 }
+
 .item-field-inner{
     grid-template-columns: 100%;
     display: grid;
     max-height: 74px;
 
 }
+
 .item-field-inner-in{
     min-width: 0;
     width: 100%;
     height: 74px;
 }
+
 .item-grid{
     padding-inline-end: 24px;
     padding-inline-start: 24px;
@@ -106,8 +123,9 @@ body,html{
     display: grid;
     grid-auto-columns: max-content;
     overflow-y: scroll;
-    gap: 24px;
+    gap: 30px;
 }
+
 .item-grid label{
     text-align: center;
     line-height: 1rem;
@@ -119,11 +137,13 @@ body,html{
     border: unset;
     width: max-content;
 }
+
 .item-flex{
     display: flex;
     flex-direction: row;
 
 }
+
 .item-flex-inner{
     align-items: center;
     grid-template-areas: 'icon space'
@@ -135,6 +155,7 @@ body,html{
     min-width: 44px;
     color: #6a6a6a;
 }
+
 .item-flex-inner img{
     justify-self: center;
     max-width: 100%;
@@ -144,12 +165,14 @@ body,html{
     grid-area: icon;
     opacity: 0.674;
 }
+
 .item-def{
     justify-self: center;
     position: relative;
     white-space: nowrap;
     grid-area: title;
 }
+
 .itemdef-in{
     display: inline-block;
     text-align: center;
@@ -158,37 +181,308 @@ body,html{
     font-size: 0.75rem;
     font-weight: 500;
 }
+
 ::-webkit-scrollbar{
     display: none;
 }
+
 .blackline{
     height: 2px;
     width: 30px;
     margin-top: 12px;
     background: black;
 }
+
 main{
     width: 100%;
 }
+
 .main-div{
     margin-top: 147px;
     width: 100%;
     padding: 24px;
+    padding-top: 21px;
+    padding-bottom: 55px;
 }
+
 .main-grid{
-    grid-template-columns: repeat(20,1fr);
-    grid-template-rows: 1fr;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 1fr;
     width: 100%;
+    row-gap: 40px;
 }
+
 .main-grid-elem{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+.grid-elem-inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .img-div{
     width: 100%;
-
+    height: 100%;
+    display: grid;
+    aspect-ratio: 20/19;
+    position: relative;
 }
+
 .img-div img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: inline-block;
+    border-radius: 12px;
+    
 }
+
+.txt-div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis
+
+}
+    
+.text-div-first{
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-div-second{
+    color: rgb(106, 106, 106);
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.text-div-third{
+    color: rgb(34, 34, 34);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.text-div-third span{
+    color: black;
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 500;
+}
+
+.past-experince{
+    font-size: 2rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    margin-top: 52px;
+    margin-bottom: 24px;
+    letter-spacing: -0.64px;
+}
+.dot-div{
+    margin-top: 240px;
+    position: absolute;
+    width: 100%;
+}
+.five-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.five-dots div{
+    border-radius: 50%;
+}
+.dot-part1{
+    width: 6px;
+    height: 6px;
+    background: white;
+}
+.dot-part2{
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.692);
+}
+.dot-part3{
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.582);
+    margin-right: 1px;
+}
+.dot-part4{
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.562);
+}
+.upload{
+    position: absolute;
+    width: 100%;
+    margin-top: 12px;
+}
+.upload-inner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#firstlive{
+    justify-content: space-between;
+}
+.live-button{
+    background: rgba(255, 255, 255, 0.767);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 25px;
+    margin-left: 12px;
+}
+.upload-button img{
+    height: 16px;
+    width: 16px;
+}
+.upload-button{
+    background: rgba(255, 255, 255, 0.767);
+    display: grid;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 12px;
+}
+footer{
+    width: 100%;
+    background: rgb(247, 247, 247);
+    padding-bottom: 1000px;
+}
+.footer-inner{
+    width: 100%;
+    padding: 48px 24px;
+}
+.footerhead{
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.22px;
+    line-height: 26px;
+}
+.table-list{
+    width: 100%;
+    padding-top: 13px;
+}
+.table-list-in{
+    margin-left: -12px;
+    margin-right: -12px;
+    overflow-y: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.inner-table{
+    overflow-y: visible;
+    text-wrap: nowrap;
+    display: flex;
+    column-gap: 6px;
+    border-bottom: 1px solid rgb(226, 219, 219);
+}
+.table-item{
+    padding: 10px;
+    color: rgb(106, 106, 106);
+    padding-bottom: 15px;
+}
+.table-item span{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+
+}
+.inner-table div:first-child{
+    color: black;
+    margin-left: -10px;
+}
+.black{
+    height: 2px;
+    width: 50px;
+    background: black;
+    margin-top: 13px;
+    position: absolute;
+}
+.footer-arrow{
+    position: absolute;
+    right: 12px;
+    margin-top: -33px;
+    background: transparent;
+    background-image: linear-gradient(to right, transparent,rgb(247, 247, 247));
+    padding-bottom: 30px;
+}
+.footer-arrow img{
+    width: 16px;
+    height: 16px;
+    margin-left: 40px;
+}
+.popular-group{
+    width: 100%;
+
+}
+.popular-group-inner{
+    padding-top: 32px;
+
+}
+.popular-items{
+    display: grid;
+    column-gap: 8px;
+    row-gap: 24px;
+    list-style-type: none;
+    grid-template-columns: repeat(2,1fr);
+
+}
+.popular-items li div{
+    line-height: 1.125rem;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+}
+.popular-bold{
+    font-weight: 500;
+    overflow: hidden;
+    color: black;
+    white-space: nowrap;
+
+}
+.popular-normal{
+    overflow: hidden;
+    color: #6a6a6a;
+    font-weight: 400;
+}
+.popular-bold img{
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+}
+
+Typing      : [29Wpm][51%]
+Focus       : [10hr 18min][460hr 39min]
+CT          : [9hr 40min][496hrs 41min]
+ACT         : [8hr 37min][429hr 33min]
+HTML        : [642][9833]
+CSS         : [295][9109]
+JS          : [0][11016]
+Total       : [937][29958]
+days        : #15
+
+
