@@ -2,7 +2,7 @@ let lastScrollTop = 0;
 
 document.addEventListener('scroll',function(){
     const navigatorid = document.getElementById('navigatorid');
-    if(window.innerWidth > 744){
+    if(window.innerWidth > 743){
         navigatorid.style.display = 'none';
     }
     else{
@@ -20,7 +20,11 @@ document.addEventListener('scroll',function(){
     }
 })
 
+document.addEventListener('scroll',function(){
+    const scrolluphide = document.getElementById('scrolluphide')
+})
 
+//head-space-div-inner
 
 
 // let lastScrollTop = 0;
