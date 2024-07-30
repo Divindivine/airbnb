@@ -1383,6 +1383,10 @@ nav{
     #from744{
         display: none;
     }
+    .media-div{
+        display: none;
+    }
+
 }
 @media (min-width: 744px){
     .search-field{
